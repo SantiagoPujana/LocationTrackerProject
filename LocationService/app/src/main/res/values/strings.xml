@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Location Service</string>
+    <string name="app_name_sp">Servicio de Ubicación</string>
+    <string name="username">PUT HERE USERNAME</string>
+    <string name="app_id">PUT HERE REALM APP ID</string>
+    <string name="database_name">PUT HERE DATABASE NAME</string>
+    <string name="user_collection_name">PUT HERE USERS COLLECTION NAME</string>
+    <string name="important_message">Dear user, this is a location service that runs in background, this allows to get your last location while app is not deployed</string>
+    <string name="important_message_sp">Querido usuario, este es un servicio de ubicación que se ejecuta en segundo plano, esto permite obtener su ubicación mientras la aplicación no esta desplegada</string>
+    <string name="permissions">Please accept the permissions to continue</string>
+    <string name="permissions_sp">Por favor, acepte los permisos para continuar</string>
+    <string name="network">There is no Internet service, enable Wifi or Mobile Data</string>
+    <string name="network_sp">No hay servicio de Internet, habilite el Wifi o los Datos móviles</string>
+    <string name="gps">Please enable the GPS service</string>
+    <string name="gps_sp">Por favor, habilite el servicio de GPS</string>
+    <string name="is_running">is running…</string>
+    <string name="is_running_sp">está ejecutándose…</string>
+    <string name="unknown_address">Unknown Address</string>
+    <string name="unknown_address_sp">Dirección Desconocida</string>
+    <string name="you_are_here">You are here:</string>
+    <string name="you_are_here_sp">Estas aquí:</string>
+
+</resources>

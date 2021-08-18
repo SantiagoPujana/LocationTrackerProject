@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/followItem"
+            android:title="FOLLOW"
+            android:icon="@drawable/ic_person"/>
+
+        <item
+            android:id="@+id/trafficItem"
+            android:title="TRAFFIC"
+            android:icon="@drawable/ic_car"/>
+
+        <item
+            android:id="@+id/redZonesItem"
+            android:title="RED ZONES"
+            android:icon="@drawable/ic_red_zone" />
+
+        <item
+            android:id="@+id/goBackItem"
+            android:title="GO BACK"
+            android:icon="@drawable/ic_go_back"/>
+
+    </group>
+
+</menu>

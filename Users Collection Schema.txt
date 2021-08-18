@@ -1,0 +1,22 @@
+{
+  "properties": {
+    "_id": {
+      "bsonType": "objectId"
+    },
+    "username": {
+      "bsonType": "string"
+    },
+    "longitude": {
+      "bsonType": "double"
+    },
+    "latitude": {
+      "bsonType": "double"
+    },
+    "address": {
+      "bsonType": "string"
+    },
+    "date": {
+      "bsonType": "string"
+    }
+  }
+}
