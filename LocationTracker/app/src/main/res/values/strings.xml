@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Location Tracker</string>
     <string name="app_name_sp">Rastreador de Ubicación</string>
-    <string name="username">PUT HERE USERNAME</string>
     <string name="app_id">PUT HERE REALM APP ID</string>
     <string name="database_name">PUT HERE DATABASE NAME</string>
     <string name="user_collection_name">PUT HERE USERS COLLECTION NAME</string>
