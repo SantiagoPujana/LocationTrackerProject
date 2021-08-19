@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.locationtracker.Language;
+import com.locationtracker.LoadingDialog;
+import com.locationtracker.MainMenu;
 import com.locationtracker.R;
 import com.locationtracker.Verifications;
 import com.locationtracker.db.RequestDBConnection;
@@ -37,6 +39,7 @@ public class TrackUser extends AppCompatActivity {
     private TextInputLayout editLayout;
     private Button goToMapButton;
     private Language language;
+    private LoadingDialog loadingDialog;
 
     private final RequestDBConnection requestDBConn = new RequestDBConnection();
     private final Verifications verifications = new Verifications();
@@ -49,9 +52,11 @@ public class TrackUser extends AppCompatActivity {
 
             if(verifications.isLocationServiceEnabled(TrackUser.this) &&
                     verifications.checkPermissions(TrackUser.this) &&
-                    verifications.isNetworkAvailable(TrackUser.this))
-                goToMap();
+                    verifications.isNetworkAvailable(TrackUser.this)) {
 
+                goToMap();
+                loadingDialog.dismissLoadingDialog();
+            }
             else countDownTimer.start();
         }
     };
@@ -63,6 +68,7 @@ public class TrackUser extends AppCompatActivity {
         setContentView(R.layout.activity_track_user);
 
         language = Language.getInstance(TrackUser.this);
+        loadingDialog = new LoadingDialog(TrackUser.this);
 
         editLayout = findViewById(R.id.textInputLayout);
         editText = findViewById(R.id.textInput);
@@ -97,10 +103,13 @@ public class TrackUser extends AppCompatActivity {
                 && Objects.equals(Objects.requireNonNull(task.getResult()).get("username"), username)){
 
                 countDownTimer.start();
-
                 editText.setText(null);
             }
-            else showAlertDialog(username + " " + missingUsername);
+            else {
+
+                loadingDialog.dismissLoadingDialog();
+                showAlertDialog(username + " " + missingUsername);
+            }
         });
     }
 
@@ -125,6 +134,7 @@ public class TrackUser extends AppCompatActivity {
                     getString(R.string.user_collection_name),
                     TrackUser.this);
 
+            loadingDialog.startLoadingDialog();
             findUsername(username, collection);
         }
     }

@@ -519,4 +519,15 @@ public class Language {
 
         return insufficientUsers;
     }
+
+    public String getLoading() {
+
+        String loading;
+
+        if(language.equals("es"))
+            loading = context.getResources().getString(R.string.loading_sp);
+        else loading = context.getResources().getString(R.string.loading);
+
+        return loading;
+    }
 }

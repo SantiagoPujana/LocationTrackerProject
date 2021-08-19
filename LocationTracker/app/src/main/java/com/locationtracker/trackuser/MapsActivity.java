@@ -30,6 +30,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import com.google.android.material.navigation.NavigationView;
 import com.locationtracker.Language;
+import com.locationtracker.LoadingDialog;
 import com.locationtracker.R;
 import com.locationtracker.Verifications;
 import com.locationtracker.db.RequestDBConnection;
@@ -68,6 +69,7 @@ public class MapsActivity
     private TextView usernameTargetTextView;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+    private LoadingDialog loadingDialog;
 
     private final ArrayList<Marker> tmpRealTimeMarkers = new ArrayList<>();
     private final ArrayList<Marker> realTimeMarkers = new ArrayList<>();
@@ -98,7 +100,7 @@ public class MapsActivity
                     mMap.addCircle(circle);
 
                 mMap.animateCamera(CameraUpdateFactory.newLatLng(location));
-
+                loadingDialog.dismissLoadingDialog();
                 drawerButton.setVisibility(View.VISIBLE);
 
             } else countDownTimerMap.start();
@@ -116,6 +118,9 @@ public class MapsActivity
 
         assert mapFragment != null;
         mapFragment.getMapAsync(MapsActivity.this);
+
+        loadingDialog = new LoadingDialog(MapsActivity.this);
+        loadingDialog.startLoadingDialog();
 
         drawerButton = findViewById(R.id.drawerButton);
         drawerLayout = findViewById(R.id.drawerLayout);
@@ -142,9 +147,7 @@ public class MapsActivity
         drawerButton.setOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.START));
 
         usersCollection = requestDBConn.requestDBConnection("LocationTrackerClient",
-                getString(R.string.database_name),
-                getString(R.string.user_collection_name),
-                MapsActivity.this);
+                getString(R.string.database_name), getString(R.string.user_collection_name), MapsActivity.this);
 
         settingText();
         setNavigationView();

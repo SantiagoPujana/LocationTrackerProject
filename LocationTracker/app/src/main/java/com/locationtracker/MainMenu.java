@@ -9,6 +9,8 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -37,6 +39,7 @@ public class MainMenu extends AppCompatActivity {
     private TextView redZonesTextView;
     private TextView titleTextView;
     private Button trackAllUsersButton;
+    private LoadingDialog loadingDialog;
 
     private final RequestDBConnection requestDBConn = new RequestDBConnection();
     private final Verifications verifications = new Verifications();
@@ -49,6 +52,7 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
 
         language = Language.getInstance(MainMenu.this);
+        loadingDialog = new LoadingDialog(MainMenu.this);
 
         trackUserTextView = findViewById(R.id.trackUserText);
         redZonesTextView = findViewById(R.id.configurationText);
@@ -81,6 +85,8 @@ public class MainMenu extends AppCompatActivity {
 
                 Intent intent = new Intent(MainMenu.this, RedZones.class);
                 startActivity(intent);
+                loadingDialog.startLoadingDialog();
+                new Handler(Looper.myLooper()).postDelayed(() -> loadingDialog.dismissLoadingDialog(), 3000);
             }
         });
     }

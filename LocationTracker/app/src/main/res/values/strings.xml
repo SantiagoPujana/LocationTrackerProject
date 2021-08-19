@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">Location Tracker</string>
     <string name="app_name_sp">Rastreador de Ubicación</string>
+    <string name="username">PUT HERE USERNAME</string>
     <string name="app_id">PUT HERE REALM APP ID</string>
     <string name="database_name">PUT HERE DATABASE NAME</string>
     <string name="user_collection_name">PUT HERE USERS COLLECTION NAME</string>
-    <string name="red_zones_collection_name">PUT HERE RED ZONES COLEECTION NAME</string>
+    <string name="red_zones_collection_name">PUT HERE RED ZONES COLLECTION NAME</string>
     <string name="track_user">Track User</string>
     <string name="track_user_sp">Rastrear Usuario</string>
     <string name="placeholder_username">Enter the username to track</string>
@@ -78,4 +79,6 @@
     <string name="track_all_users_sp">Rastrear todos los Usuarios</string>
     <string name="insufficient_users">There\'s only one user, please use TRACK USER</string>
     <string name="insufficient_users_sp">Sólo hay un usuario, por favor use RASTREAR USUARIO</string>
+    <string name="loading">Loading…</string>
+    <string name="loading_sp">Cargando…</string>
 </resources>

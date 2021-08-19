@@ -25,6 +25,7 @@ import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import com.locationtracker.Language;
+import com.locationtracker.LoadingDialog;
 import com.locationtracker.R;
 import com.locationtracker.Verifications;
 
@@ -47,6 +48,7 @@ public class SetRedZoneCenter extends AppCompatActivity {
     private String centerTitle;
     private String action;
     private LocationCallback locationCallBack;
+    private LoadingDialog loadingDialog;
 
     private final Verifications verifications = new Verifications();
 
@@ -71,6 +73,8 @@ public class SetRedZoneCenter extends AppCompatActivity {
         mySavedInstance = savedInstanceState;
 
         language = Language.getInstance(SetRedZoneCenter.this);
+        loadingDialog = new LoadingDialog(SetRedZoneCenter.this);
+        loadingDialog.startLoadingDialog();
 
         nextButton = findViewById(R.id.next);
         messageTextView = findViewById(R.id.messageTextView);
@@ -155,6 +159,8 @@ public class SetRedZoneCenter extends AppCompatActivity {
 
                 googleMap.addMarker(markerOptions);
             }
+
+            loadingDialog.dismissLoadingDialog();
 
             googleMap.setOnMapClickListener(latLng -> {
 
