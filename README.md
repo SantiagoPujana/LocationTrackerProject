@@ -124,4 +124,4 @@ You must set following specific data in the strings.xml file in each app project
 
 - Location Service App consumes a lot of battery because always runs a location background service, so some vendors like Samsung or Huawei block this type of apps.
 
-<a href='https://github.com/ProzTock/LocationTrackerProject/blob/main/LICENSE'><b>License MIT<b></a>
+<a href="https://github.com/ProzTock/LocationTrackerProject/blob/main/LICENSE" target="_blank"><b>License MIT<b></a>
