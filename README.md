@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
 </p>
 
-**About**
+**About project**
 
 This project consists of two android apps, Location Service running a background service that get last known location (latitude, longitude, address) every 3 seconds and then upload it to a MongoDB collection with a username that you must set in the strings.xml file, this app must be installed in the user's device. Background service needs launch notifications while is working and app is not deployed, thus you must define channel id and other things.
 
