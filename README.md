@@ -114,8 +114,6 @@ You must set following specific data in the strings.xml file in each app project
 
 - Channel Id Notification (Location Service)
 
-<h3><b>Using MongoDB and Realm</b></h3>
-
 <h3><b>Additional Features</b></h3>
 
 - Language: These apps detect phone language and changing text to Spanish or English according to language detected, if phone language isn't Spanish then English language will be selected.
