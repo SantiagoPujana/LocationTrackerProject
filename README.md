@@ -1,19 +1,19 @@
 <h1 align="center">Location Tracker Project</h1>
 
-<p align="center">  
+<div align="center">  
   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" />
   <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
   <img src="https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white" />
   <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
-</p>
+</div>
 
 <h3><b>About project</b></h3>
 
 This project consists of two android apps, Location Service running a background service that get last known location (latitude, longitude, address) every 3 seconds and then upload it to a MongoDB collection with a username that you must set in the strings.xml file, this app must be installed in the user's device. Background service needs launch notifications while is working and app is not deployed, thus you must define channel id and other things.
 
-<p align="center">
+<div align="center">
   <img src="https://raw.githubusercontent.com/ProzTock/LocationTrackerProject/master/UI_Pictures/Location_Service_App_UI.jpeg">
-</p>
+</div>
 
 <h3><b>Features</b></h3>
 
@@ -25,9 +25,9 @@ Location Tracker App contains the following features:
 
 - Track All Users: It shows on the map all locations stored in the database, each user location will be a maker, thus won't have follow target option.
 
-<p align="center">
+<div align="center">
   <img src="https://raw.githubusercontent.com/ProzTock/LocationTrackerProject/master/UI_Pictures/Location_Tracker_App_UI.png">
-</p>
+</div>
 
 <h3><b>Using MongoDB and Realm</b></h3>
 
