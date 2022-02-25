@@ -1,3 +1,5 @@
+<div align="justify"> 
+
 <h1 align="center">Location Tracker Project</h1>
 
 <div align="center">  
@@ -15,7 +17,7 @@ This project consists of two android apps, Location Service running a background
   <img src="https://raw.githubusercontent.com/ProzTock/LocationTrackerProject/master/UI_Pictures/Location_Service_App_UI.jpeg">
 </div>
 
-<h3><b>Features</b></h3>
+<h3><b>Features</b></h3> 
 
 Location Tracker App contains the following features:
 
@@ -24,7 +26,7 @@ Location Tracker App contains the following features:
 - Red Zones: You can set up (insert, delete and update) Red Zones, you must define a center (latitude, longitude), radius in meters and a name, a red zone is a circle on the map that allows you know if user is inside of it, and it is inside, Location Tracker emits an alarm.
 
 - Track All Users: It shows on the map all locations stored in the database, each user location will be a maker, thus won't have follow target option.
-
+ 
 <div align="center">
   <img src="https://raw.githubusercontent.com/ProzTock/LocationTrackerProject/master/UI_Pictures/Location_Tracker_App_UI.png">
 </div>
@@ -99,7 +101,7 @@ MongoDB Atlas and Realm were used in these projects, thus you must include app i
           "bsonType": "int"
         }
       }
-    }
+    } 
 
 <h3><b>Set up App Data</b></h3>
 
@@ -127,3 +129,5 @@ You must set following specific data in the strings.xml file in each app project
 - Location Service App consumes a lot of battery because always runs a location background service, so some vendors like Samsung or Huawei block this type of apps.
 
 <a href="https://github.com/ProzTock/LocationTrackerProject/blob/main/LICENSE"><b>MIT License</b></a>
+
+</div> 
